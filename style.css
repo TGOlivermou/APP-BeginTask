@@ -1,0 +1,172 @@
+.changa-one-regular {
+  font-family: "Changa One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.changa-one-regular-italic {
+  font-family: "Changa One", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+body {
+  background-image: url('img/taskFundo.png');
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  background-position: left;
+  font-family: 'Segoe UI', sans-serif;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.logo-ung{
+  position: fixed;
+  bottom: 0;
+  left: 150px;
+  border-radius: 8%;
+  width: 200px;
+  margin: 125px;
+  animation: slideIn 2s linear;
+}
+.login-container {
+  animation: slideUp 1s ease-in-out;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(25, 32, 39, 0.2);
+  width: 300px;
+  height: 390px;
+  position: absolute;
+  top: 29%;
+  left: 49%;
+  text-align: center;
+  border: 1px solid #0918e220;
+}
+/* Animação deslize do Texto. descoberto(slide up */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);}}
+h1 {
+  margin-bottom: 6px;
+  font-size: 80px;
+  font-family: "Changa One", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  animation: slideUp 1s ease-out;
+}
+/* animação deslize para verso (slide)Inveso */
+@keyframes slideIn {
+  from{
+    opacity: 0;
+    transform: translateX(-25%);
+  }
+  to {
+    opacity: 1;
+          transform: translateX(0);}}
+  /* Texto Paragráfo com animação;  */
+ .boxP{ 
+  width: 90%;
+  animation: slideIn 2s linear;
+  font-family: "Changa One", sans-serif;
+  color: #fff;
+  font-size: 25px;
+  position: absolute;
+  left: 150px;
+}
+.input-box {
+  display: flex;
+  align-items: center;
+  background:linear-gradient(to right, #fff, #e5e5e5);
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  animation: slideUp 1s ease-in-out;
+}
+
+.input-box label {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.input-box input {
+  border: none;
+  background: none;
+  color: #111;
+  outline: none;
+  width: 100%;
+}
+
+.btn {
+  background: linear-gradient(to right, #0cbeef);
+  border: none;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 8px;
+  color: #1a1a1a;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+/* Animação para o Git */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.btn1 i {
+  animation: spin 4s linear infinite;
+}
+.btn1 {
+    background:linear-gradient(to right, #31b4c2, #e0cba8);
+    display: inline-flex;
+    align-items: center;
+    background-color: #24292e;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s;
+}
+.btn1:hover {
+  background-color: #444c56;
+  border-bottom: 0.4rem;
+  padding-bottom: .5rem;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #9a9a99, #e4ddd5);
+  border-bottom: 0.1rem;
+  padding-bottom: .2rem;
+  font-size: 2rem;
+  transform: scale(1.1);
+  background-color: #333;
+}
+
+.forgot-password {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #cbb892;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/*Imagem de fundo educacional do Task= usei o stackoverflow.*/
