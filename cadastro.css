@@ -1,0 +1,212 @@
+  
+.changa-one-regular {
+  font-family: "Changa One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');
+ 
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('img/task.png');
+    font-family: 'Changa One', sans-serif;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 100vw;
+}
+.img{
+    width: 100%;
+    display:fixed;
+    bottom: 20;
+    border-radius: 8%;
+    margin: 30%;
+    margin-left: 25px;
+    margin-right:60%;
+}
+
+/* Animação Brilhante alternative Obs: INfinitos Keyframes */
+.img{
+    animation: brilho 2s infinite alternate;
+    transition: box-shadow 2s ease;
+}
+@keyframes brilho {
+    0%{
+        filter:brightness(1);
+        box-shadow: 0 0 10px rgba(255,255,255, 0.2);
+    }
+    50% {
+        filter: brightness(1.4);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    100%{
+        filter: brightness(1.4);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+}
+.container {
+    display: flex; /*Matem no eixo*/ 
+    position: absolute;
+    text-align: center;
+    border-radius: 20px;
+    gap: 30px; /* <-- espaçamento entre os blocos chat pego */ 
+    padding: 20px; /* adiciona margem interna geral chat pego */
+    background-color: #0918e220;
+    position:absolute;
+    left: 44%;
+    animation:slideIn 1s, ease-in-out;
+}
+.sidebar {
+    position:relative;
+    background-color: #e6e6e6;
+    border-radius: 20px;
+    width: 250px;
+    box-shadow: 0 0 15px rgba(25, 32, 39, 0.2);
+    padding: 69px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+ /* adiciona margem interna geral, chat pego */
+}
+
+.sidebar-item {
+    width: 100%;
+    display: flex;
+    align-items: left;
+    border:none;
+    position: relative;
+    cursor: pointer;
+    animation: slideIn 1s, ease;
+}
+/* Animação tirada da pagina de Login- SlideIn */
+@keyframes slideIn {
+  from{
+    opacity: 0;
+    transform: translateX(-25%);
+  }
+  to {
+    opacity: 1;
+          transform: translateX(0);}}
+.sidebar-item:hover{
+    transform: scale(1.05);
+}
+
+.circle-button {
+    width: 40px;
+    height: 40px;
+    background:linear-gradient(to right, aqua, #31b4c2);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+}
+/* variavel das setas/ funcionamento CSS+JavaScript. Obs: já está codado */
+.arrow {
+    font-size: 16px;
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.desc-box {
+    position: absolute;
+    left: 60px;
+    background-color:#31b4c2;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    display: none;
+    width: 150px;
+    animation: slideIn 1s linear;
+}
+/* crio um bloco dentro do box, e dai a criatividade fa um "SHOW" */
+.desc-box.show {
+    display: block;
+}
+
+.form-section {
+    background-color: #e6e6e6;
+    padding: 40px;
+    border-radius: 10px;
+    width: 366px;
+}
+
+.form-section h1 {
+    font-size: 100px;
+    font-weight: 100px;
+    font-family:"Changa One", sans-serif;
+    font-size: 80;
+    font-weight: 400;
+    margin-bottom: 8px;
+    font-size: 35px;
+    color: #00b4d8;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #d9d9d9;
+    border-radius: 20px;
+    padding: 16px 10px;
+}
+
+.form-group span {
+    margin-right: 10px;
+    color:#111
+}
+
+.form-group input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+}  
+
+/* pego do Chat para melhor desenvolviemnto e amplo conhecimento CSS */
+.buttons .cadastrar,
+.buttons .login {
+  margin-top: 10px;
+  flex: 1;
+  width: 100%; /* importante para dividir igualmente */
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  background:linear-gradient(to right, #00b4d8, aqua);
+  transition: transform 0.3s ease, background-color  0.3s ease /* Transição dos botões*/
+}
+
+.buttons .cadastrar:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #00b4d8, #90e0ef);
+  border: none;
+}
+
+.buttons .login {
+  background: linear-gradient(to right,#00b4d8, #90e0ef);
+  color: #fff;
+}
+
+.buttons .login:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #6c757d, #adb5bd);
+  border: none;
+}
+
+     /*justify-content: space-between; espaçar os itens uniformemente no eixo principal. Uma quantidade igual de espaço
+   é colocada entre cada item com a esquerda e direita dos itens sendo niveladas com as bordas do contêiner flex.*/
